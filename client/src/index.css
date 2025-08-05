@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(210, 40%, 8%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 16%, 47%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(210, 40%, 8%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(210, 40%, 8%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --primary: hsl(210, 100%, 50%);
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(210, 40%, 12%);
+  --muted: hsl(210, 40%, 94%);
+  --muted-foreground: hsl(215, 16%, 42%);
+  --popover: hsl(0, 0%, 98%);
+  --popover-foreground: hsl(210, 40%, 12%);
+  --card: hsl(0, 0%, 98%);
+  --card-foreground: hsl(210, 40%, 12%);
+  --border: hsl(214, 32%, 88%);
+  --input: hsl(214, 32%, 88%);
+  --primary: hsl(210, 100%, 45%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(0, 100%, 60%);
+  --secondary: hsl(0, 100%, 50%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(210, 40%, 96%);
-  --accent-foreground: hsl(210, 40%, 8%);
+  --accent: hsl(210, 40%, 92%);
+  --accent-foreground: hsl(210, 40%, 12%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(210, 100%, 50%);
+  --ring: hsl(210, 100%, 45%);
   --radius: 0.5rem;
   
   /* Custom portfolio colors - more masculine */
@@ -125,11 +125,11 @@
   }
 
   .spotify-player {
-    background: linear-gradient(135deg, hsl(141, 76%, 48%) 0%, hsl(142, 79%, 53%) 100%);
+    background: linear-gradient(135deg, #1db954 0%, #157a3e 100%);
   }
 
   .youtube-player {
-    background: linear-gradient(135deg, hsl(0, 100%, 50%) 0%, hsl(0, 100%, 40%) 100%);
+    background: linear-gradient(135deg, #cc0000 0%, #8B0000 100%);
   }
 
   .nav-link.active {

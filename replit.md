@@ -10,6 +10,8 @@ The portfolio includes sections for displaying projects with technology stacks, 
 - **Design Preference**: Masculine, less girly styling
 - **Communication Style**: Simple, everyday language
 - **Media Integration**: Real Spotify playlist embed and Google My Maps integration
+- **Text Visibility**: Static subtitle text (no movement/animation), improved contrast
+- **Color Preferences**: Darker Spotify green (#1db954), proper blood red for YouTube (#cc0000), softer light theme
 
 # System Architecture
 

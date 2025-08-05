@@ -72,25 +72,21 @@ export function HeroSection() {
             className="text-6xl md:text-8xl font-bold mb-6"
             variants={itemVariants}
           >
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="text-foreground font-bold">
               <AnimatedText text="Hello, I'm Om" type="float" />
             </span>
           </motion.h1>
 
           <motion.div 
-            className="text-xl md:text-2xl text-muted-foreground mb-8"
+            className="text-xl md:text-2xl text-foreground font-medium mb-8"
             variants={itemVariants}
           >
-            <AnimatedText 
-              text="Full Stack Developer • Tech Enthusiast • Problem Solver" 
-              type="typewriter" 
-              delay={1}
-            />
+            Full Stack Developer • Tech Enthusiast • Problem Solver
           </motion.div>
 
           {/* Animated description */}
           <motion.p 
-            className="text-lg max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="text-lg max-w-3xl mx-auto mb-12 leading-relaxed text-foreground"
             variants={itemVariants}
           >
             {words.map((word, index) => (
