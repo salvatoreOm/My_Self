@@ -166,17 +166,17 @@ export const mediaItems: MediaItem[] = [
   {
     id: "spotify",
     type: "spotify",
-    title: "athens, greece",
-    description: "The playlist I listened to during my 26.2 mile run in Athens, Greece! 🏃‍♀️",
+    title: "My Coding Playlist",
+    description: "The beats that fuel my programming sessions and late-night coding marathons 🎧",
     embedUrl: "https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd",
-    thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
   },
   {
     id: "youtube",
     type: "youtube",
-    title: "MIT 2023 Commencement Class President Speech",
-    description: "Watch my class president speech from MIT's 2023 commencement ceremony!",
+    title: "My Latest Project Demo",
+    description: "Check out my recent tech project walkthrough and development process!",
     embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    thumbnail: "https://pixabay.com/get/g21b4d2e011ee00f5185383583fe40e064fdf0c389bf7a6a4978946bbb4edebccb83a5c2f16945bd7c428883f066d49c6b69f8fd2193aeeebe7df0e1a84c0b6e1_1280.jpg",
+    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
   },
 ];

@@ -23,7 +23,7 @@ export default function Home() {
       <footer className="bg-card border-t border-border py-8 theme-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-muted-foreground">
-            Made with <span className="text-red-500 animate-pulse">❤️</span> by Anna Sun © 2024
+            Made with <span className="text-red-500 animate-pulse">❤️</span> by Om Parihar © 2024
           </p>
         </div>
       </footer>

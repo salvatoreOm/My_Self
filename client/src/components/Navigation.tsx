@@ -70,14 +70,14 @@ export function Navigation() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="https://pixabay.com/get/g6c198706c91177d7b78b7f680963c982c4db5738d2e7117e0e1397f950806493faa7d85d0925fac61e52170b4ca8bed7e1cafc2e567a0dbb101ad2db00e4f7de_1280.jpg"
-                alt="Anna Sun Profile"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                alt="Om Parihar Profile"
                 className="w-12 h-12 rounded-full border-2 border-primary glowing-border animate-pulse-slow"
                 data-testid="profile-image"
               />
             </motion.div>
             <div className="text-xl font-bold">
-              <AnimatedText text="Anna Sun" />
+              <AnimatedText text="Om Parihar" />
             </div>
           </div>
 

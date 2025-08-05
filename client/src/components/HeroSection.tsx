@@ -26,8 +26,8 @@ export function HeroSection() {
   };
 
   const words = [
-    "I'm", "a", "passionate", "creator", "who", "loves", "building", 
-    "amazing", "digital", "experiences", "and", "exploring", "the", "world!"
+    "I'm", "a", "passionate", "developer", "who", "loves", "building", 
+    "innovative", "web", "applications", "and", "solving", "complex", "problems!"
   ];
 
   return (
@@ -48,8 +48,8 @@ export function HeroSection() {
             variants={itemVariants}
           >
             <motion.img
-              src="https://pixabay.com/get/geab2256821d52409048654fc40a6b38c21cef45a320889b342ed0d1b6e3b1759efb36d441522ad30be341066da79f36fd28fecf4e8f4adffdbd408f78922e336_1280.jpg"
-              alt="Anna Sun - MIT Graduate"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+              alt="Om Parihar - Developer"
               className="w-full h-full rounded-full border-4 border-primary glowing-border"
               animate={{
                 y: [-10, 10, -10],
@@ -73,7 +73,7 @@ export function HeroSection() {
             variants={itemVariants}
           >
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              <AnimatedText text="Hello, I'm Anna" type="float" />
+              <AnimatedText text="Hello, I'm Om" type="float" />
             </span>
           </motion.h1>
 
@@ -82,7 +82,7 @@ export function HeroSection() {
             variants={itemVariants}
           >
             <AnimatedText 
-              text="MIT Graduate • Entrepreneur • Creative Technologist" 
+              text="Full Stack Developer • Tech Enthusiast • Problem Solver" 
               type="typewriter" 
               delay={1}
             />
@@ -102,7 +102,7 @@ export function HeroSection() {
                 } as React.CSSProperties}
                 whileHover={{
                   scale: 1.1,
-                  color: "hsl(var(--primary))",
+                  color: "#0080ff",
                 }}
               >
                 {word}

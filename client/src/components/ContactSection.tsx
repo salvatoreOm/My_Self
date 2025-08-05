@@ -8,22 +8,22 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "anna@example.com",
-    href: "mailto:anna@example.com",
+    value: "om.parihar@example.com",
+    href: "mailto:om.parihar@example.com",
     color: "text-primary",
   },
   {
     icon: Linkedin,
     title: "LinkedIn",
     value: "Connect professionally",
-    href: "#",
+    href: "https://linkedin.com/in/omparihar",
     color: "text-blue-600",
   },
   {
     icon: Github,
     title: "GitHub",
     value: "Check out my code",
-    href: "#",
+    href: "https://github.com/omparihar",
     color: "text-foreground",
   },
 ];
@@ -87,7 +87,7 @@ export function ContactSection() {
               } as React.CSSProperties}
               whileHover={{
                 scale: 1.1,
-                color: "hsl(var(--primary))",
+                color: "#0080ff",
               }}
             >
               {word}

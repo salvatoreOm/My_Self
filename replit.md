@@ -6,7 +6,10 @@ The portfolio includes sections for displaying projects with technology stacks, 
 
 # User Preferences
 
-Preferred communication style: Simple, everyday language.
+- **User Identity**: Om Parihar (male)
+- **Design Preference**: Masculine, less girly styling
+- **Communication Style**: Simple, everyday language
+- **Media Integration**: Real Spotify playlist embed and Google My Maps integration
 
 # System Architecture
 
