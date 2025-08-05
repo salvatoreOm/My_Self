@@ -39,12 +39,10 @@ export function ProjectsSection() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground"
           variants={itemVariants}
         >
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            <AnimatedText text="Featured Projects" type="float" />
-          </span>
+          <AnimatedText text="Featured Projects" type="float" />
         </motion.h2>
 
         <motion.div 

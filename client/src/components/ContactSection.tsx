@@ -66,12 +66,10 @@ export function ContactSection() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold mb-8"
+          className="text-4xl md:text-5xl font-bold mb-8 text-foreground"
           variants={itemVariants}
         >
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            <AnimatedText text="Let's Create Something Amazing" type="float" />
-          </span>
+          <AnimatedText text="Let's Create Something Amazing" type="float" />
         </motion.h2>
 
         <motion.p 
