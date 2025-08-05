@@ -6,7 +6,7 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
-    <BaseThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+    <BaseThemeProvider defaultTheme="system" storageKey="portfolio-theme">
       {children}
     </BaseThemeProvider>
   );

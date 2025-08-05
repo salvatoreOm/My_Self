@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sun, Moon, Menu } from "lucide-react";
+import { Sun, Moon, Menu, Clock } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { AnimatedText } from "./AnimatedText";
 import { Button } from "@/components/ui/button";
@@ -46,9 +46,20 @@ export function Navigation() {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const themeOrder = ["dark", "system", "light"];
+  const themeIcons = [
+    <Moon key="moon" className="h-5 w-5" />, 
+    <Clock key="clock" className="h-5 w-5" />, 
+    <Sun key="sun" className="h-5 w-5" />
+  ];
+  const themeColors = [
+    "bg-gradient-to-br from-gray-700 to-gray-900",
+    "bg-gradient-to-br from-gray-200 to-gray-400",
+    "bg-gradient-to-br from-yellow-100 to-white"
+  ];
+  const currentThemeIndex = themeOrder.indexOf(theme);
+  const nextTheme = () => themeOrder[(currentThemeIndex + 1) % themeOrder.length];
+  const toggleTheme = () => setTheme(nextTheme());
 
   return (
     <motion.nav
@@ -98,19 +109,32 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Theme Toggle */}
+          {/* Theme Toggle - 3-Way Switch */}
           <Button
             variant="outline"
-            size="icon"
             onClick={toggleTheme}
-            className="hover:bg-accent transition-colors duration-300"
+            aria-label="Toggle theme"
+            className="relative h-12 w-36 rounded-full bg-gradient-to-r from-blue-100 via-gray-100 to-yellow-100 dark:from-gray-800 dark:via-gray-700 dark:to-blue-900 border-2 border-primary/30 hover:border-primary/50 transition-all duration-500 p-1 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary"
             data-testid="theme-toggle"
+            tabIndex={0}
           >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5 text-yellow-500" />
-            ) : (
-              <Moon className="h-5 w-5 text-blue-500" />
-            )}
+            {/* Subtle background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-200 via-gray-200 to-yellow-200 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 opacity-40 transition-opacity duration-500 pointer-events-none" />
+            {/* Background icons (always in same place) */}
+            <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none">
+              <Moon className={`h-4 w-4 transition-opacity duration-300 ${theme === "dark" ? "opacity-100 text-blue-300" : "opacity-40 text-gray-400"}`} />
+              <Clock className={`h-4 w-4 transition-opacity duration-300 ${theme === "system" ? "opacity-100 text-gray-600" : "opacity-40 text-gray-400"}`} />
+              <Sun className={`h-4 w-4 transition-opacity duration-300 ${theme === "light" ? "opacity-100 text-yellow-500" : "opacity-40 text-gray-400"}`} />
+            </div>
+            {/* Sliding indicator */}
+            <motion.div
+              className={`absolute top-1 h-8 w-8 rounded-full shadow-lg flex items-center justify-center ${themeColors[currentThemeIndex]}`}
+              animate={{ x: currentThemeIndex * 50 }}
+              transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              style={{ left: 2 }}
+            >
+              {themeIcons[currentThemeIndex]}
+            </motion.div>
           </Button>
 
           {/* Mobile menu button */}

@@ -3,27 +3,27 @@ import type { Project, TimelineItem, Location, MediaItem } from "@shared/schema"
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Startup Innovation Lab",
-    description: "Working on a startup idea full-time, focusing on innovative solutions for modern problems.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-    technologies: ["React", "TypeScript", "Node.js"],
-    link: "#",
+    title: "Swachhta FIR",
+    description: "Swachhta FIR - Railway Station Cleanliness Complaint System\nA bilingual (English/Hindi) web application for reporting and managing cleanliness complaints at railway stations.",
+    image: "/Swacchta_FIR.png",
+    technologies: ["Django", "Bilingual", "OTP", "QR Code"],
+    link: "https://github.com/salvatoreOm/Swachhta_FIR_V2",
   },
   {
     id: "2",
-    title: "Data Visualizations & Society",
-    description: "Interactive visualizations exploring the intersection of data science and social impact.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-    technologies: ["D3.js", "Python", "Research"],
-    link: "#",
+    title: "Zhecker V1",
+    description: "It's the first production version of my start up, very rare....",
+    image: "/ZheckerLogo.jpg",
+    technologies: ["Startup", "Production", "Web", "Azure Cloud", "Azure VM"],
+    link: "https://zhecker.com",
   },
   {
     id: "3",
-    title: "Interactive Music Systems",
-    description: "Creating innovative interfaces for musical expression and performance.",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-    technologies: ["Max/MSP", "Arduino", "Audio"],
-    link: "#",
+    title: "LetsTalk",
+    description: "It's a chat application built in Django, using channels and Web Sockets, and for client to server connections we used HTTP response.",
+    image: "/Let'sTalk.png",
+    technologies: ["Django", "WebSockets", "Channels"],
+    link: "https://github.com/salvatoreOm/LetsTalk",
   },
 ];
 
@@ -31,7 +31,7 @@ export const timelineItems: TimelineItem[] = [
   {
     id: "6",
     semester: "VI",
-    year: 2024,
+    year: 2025,
     courses: [
       {
         code: "ECE326",
@@ -115,7 +115,7 @@ export const timelineItems: TimelineItem[] = [
   {
     id: "4",
     semester: "IV",
-    year: 2023,
+    year: 2024,
     courses: [
       {
         code: "ECE307",
@@ -189,7 +189,7 @@ export const timelineItems: TimelineItem[] = [
   {
     id: "2",
     semester: "II",
-    year: 2022,
+    year: 2023,
     courses: [
       {
         code: "ECL106",
@@ -288,6 +288,19 @@ export const additionalJourneyItems = [
     ],
   },
   {
+    id: "tally-intern",
+    semester: "Upcoming",
+    year: 2025,
+    special: "Software Intern at Tally Solutions (Oct 2025 - Jan 2026)",
+    courses: [
+      {
+        code: "Tally Solutions",
+        name: "Upcoming Software Intern at Tally Solutions",
+        icon: "fas fa-laptop-code",
+      },
+    ],
+  },
+  {
     id: "school-senior",
     semester: "11th-12th",
     year: 2022,
@@ -371,3 +384,17 @@ export const mediaItems: MediaItem[] = [
     thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
   },
 ];
+
+export const codingProfiles = {
+  title: "Coding Profiles & Achievements",
+  profiles: [
+    { name: "Codeforces", url: "https://codeforces.com/profile/Salvatore_Knight" },
+    { name: "LeetCode", url: "https://leetcode.com/u/DarkOp51/" },
+    { name: "CodeChef", url: "https://www.codechef.com/users/salvatore_om" }
+  ],
+  achievements: [
+    "Ranked in the top 7.74% on LeetCode with a max rating of 1806 and solved 350+ problems.",
+    "3-star coder on CodeChef (max rating: 1711) and Pupil on Codeforces (max rating: 1331).",
+    "Achieved a top 1000 global rank twice in LeetCode Biweekly & Weekly Contests."
+  ]
+};

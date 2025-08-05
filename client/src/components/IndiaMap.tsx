@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { indiaLocations, additionalJourneyItems } from "@/data/portfolioData";
+import { indiaLocations, additionalJourneyItems, codingProfiles } from "@/data/portfolioData";
 import type { Location } from "@shared/schema";
 
 interface MapPinProps {
@@ -162,6 +162,47 @@ export function IndiaMap() {
         ))}
       </div>
     </div>
+
+    {/* Coding Profiles & Achievements */}
+    <motion.div
+      className="mt-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+    >
+      <h3 className="text-2xl font-bold mb-6 text-center text-primary">
+        {codingProfiles.title}
+      </h3>
+      <Card className="max-w-2xl mx-auto shadow-lg hover:shadow-xl transition-all duration-300">
+        <CardContent className="p-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+            <div className="flex flex-col gap-2">
+              {codingProfiles.profiles.map((profile) => (
+                <a
+                  key={profile.name}
+                  href={profile.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-semibold text-blue-600 hover:underline flex items-center gap-2"
+                >
+                  {profile.name}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7l-10 10m0 0h6m-6 0V7" /></svg>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-2 text-foreground">Achievements:</h4>
+            <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
+              {codingProfiles.achievements.map((ach, idx) => (
+                <li key={idx}>{ach}</li>
+              ))}
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   </div>
   );
 }

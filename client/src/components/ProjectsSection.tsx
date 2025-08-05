@@ -83,14 +83,21 @@ export function ProjectsSection() {
                       </Badge>
                     ))}
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full group"
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
                     data-testid={`project-link-${project.id}`}
                   >
-                    Learn More 
-                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full group"
+                    >
+                      Learn More 
+                      <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </motion.div>
