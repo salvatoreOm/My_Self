@@ -10,7 +10,6 @@ const navLinks = [
   { href: "#favorites", label: "Favorites" },
   { href: "#projects", label: "Projects" },
   { href: "#journey", label: "Journey" },
-  { href: "#contact", label: "Get in Touch" },
 ];
 
 export function Navigation() {
@@ -62,21 +61,21 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
             {/* Circular profile photo */}
             <motion.div 
-              className="relative"
+              className="relative flex-shrink-0"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                src="/MyDP.JPG"
                 alt="Om Parihar Profile"
-                className="w-12 h-12 rounded-full border-2 border-primary glowing-border animate-pulse-slow"
+                className="w-12 h-12 rounded-full border-2 border-primary glowing-border animate-pulse-slow object-cover"
                 data-testid="profile-image"
               />
             </motion.div>
-            <div className="text-xl font-bold">
+            <div className="text-xl font-bold flex items-center">
               <AnimatedText text="Om Parihar" />
             </div>
           </div>

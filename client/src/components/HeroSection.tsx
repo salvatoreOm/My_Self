@@ -48,9 +48,9 @@ export function HeroSection() {
             variants={itemVariants}
           >
             <motion.img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+              src="/MyDP.JPG"
               alt="Om Parihar - Developer"
-              className="w-full h-full rounded-full border-4 border-primary glowing-border"
+              className="w-full h-full rounded-full border-4 border-primary glowing-border object-cover"
               animate={{
                 y: [-10, 10, -10],
               }}
@@ -62,18 +62,18 @@ export function HeroSection() {
               data-testid="hero-profile-image"
             />
             <motion.div 
-              className="absolute -bottom-2 -right-2 bg-green-500 w-8 h-8 rounded-full border-4 border-background"
+              className="absolute -bottom-2 -right-2 bg-green-800 w-8 h-8 rounded-full border-4 border-background"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
           </motion.div>
 
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold mb-6"
+            className="text-6xl md:text-8xl font-bold mb-6 text-foreground"
             variants={itemVariants}
           >
             <span className="text-foreground font-bold">
-              <AnimatedText text="Hello, I'm Om" type="float" />
+              <AnimatedText text="Hello, I'm Om !" type="float" className="text-foreground" />
             </span>
           </motion.h1>
 
@@ -81,7 +81,7 @@ export function HeroSection() {
             className="text-xl md:text-2xl text-foreground font-medium mb-8"
             variants={itemVariants}
           >
-            Full Stack Developer • Tech Enthusiast • Problem Solver
+            Entrepreneur • Software Engineer • Singer
           </motion.div>
 
           {/* Animated description */}
@@ -98,7 +98,7 @@ export function HeroSection() {
                 } as React.CSSProperties}
                 whileHover={{
                   scale: 1.1,
-                  color: "#0080ff",
+                  color: "hsl(var(--primary))",
                 }}
               >
                 {word}
@@ -115,6 +115,15 @@ export function HeroSection() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 animate-bounce-slow"
               data-testid="view-work-button"
+              onClick={() => {
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
             >
               View My Work
             </Button>
@@ -122,9 +131,22 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-              data-testid="download-resume-button"
+              data-testid="professional-talk-button"
+              onClick={() => {
+                // Scroll to contact section with smooth behavior
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  // Set hash to trigger the message
+                  window.location.hash = 'contact-professional';
+                  // Smooth scroll to contact section
+                  contactSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
             >
-              Download Resume
+              Professional Talk?
             </Button>
           </motion.div>
         </div>

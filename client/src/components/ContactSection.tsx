@@ -3,32 +3,53 @@ import { AnimatedText } from "./AnimatedText";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Github } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "om.parihar@example.com",
-    href: "mailto:om.parihar@example.com",
+    value: "bt22eci012@iiitn.ac.in",
+    href: "mailto:bt22eci012@iiitn.ac.in",
     color: "text-primary",
   },
   {
     icon: Linkedin,
     title: "LinkedIn",
     value: "Connect professionally",
-    href: "https://linkedin.com/in/omparihar",
+    href: "https://www.linkedin.com/in/salvatoreom/",
     color: "text-blue-600",
   },
   {
     icon: Github,
     title: "GitHub",
     value: "Check out my code",
-    href: "https://github.com/omparihar",
+    href: "https://github.com/salvatoreOm",
     color: "text-foreground",
   },
 ];
 
 export function ContactSection() {
+  const [showProfessionalMessage, setShowProfessionalMessage] = useState(false);
+
+  useEffect(() => {
+    // Check if redirected from Professional Talk button
+    const checkForProfessionalTalk = () => {
+      if (window.location.hash === '#contact-professional') {
+        setShowProfessionalMessage(true);
+        // Remove the hash after showing the message
+        window.history.replaceState(null, '', window.location.pathname);
+        // Hide the message after 5 seconds
+        setTimeout(() => setShowProfessionalMessage(false), 5000);
+      }
+    };
+
+    checkForProfessionalTalk();
+    window.addEventListener('hashchange', checkForProfessionalTalk);
+    
+    return () => window.removeEventListener('hashchange', checkForProfessionalTalk);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,6 +93,33 @@ export function ContactSection() {
           <AnimatedText text="Let's Create Something Amazing" type="float" />
         </motion.h2>
 
+        {/* Professional Talk Message */}
+        {showProfessionalMessage && (
+          <motion.div
+            className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-lg p-6 mb-8 mx-auto max-w-md"
+            initial={{ opacity: 0, scale: 0.8, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: -20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <div className="text-center">
+              <motion.div
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 0.6, repeat: 2 }}
+                className="text-2xl mb-2"
+              >
+                💬
+              </motion.div>
+              <p className="text-lg font-semibold text-primary mb-2">
+                Let's have a professional conversation! 🚀
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Contact via below options ⬇️
+              </p>
+            </div>
+          </motion.div>
+        )}
+
         <motion.p 
           className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
           variants={itemVariants}
@@ -85,7 +133,7 @@ export function ContactSection() {
               } as React.CSSProperties}
               whileHover={{
                 scale: 1.1,
-                color: "#0080ff",
+                color: "hsl(var(--primary))",
               }}
             >
               {word}
@@ -102,6 +150,8 @@ export function ContactSection() {
             <motion.a
               key={method.title}
               href={method.href}
+              target="_blank"
+              rel="noopener noreferrer"
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -123,16 +173,7 @@ export function ContactSection() {
           ))}
         </motion.div>
 
-        {/* CTA */}
-        <motion.div variants={itemVariants}>
-          <Button 
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 animate-pulse-slow"
-            data-testid="get-in-touch-button"
-          >
-            <AnimatedText text="Get in Touch" />
-          </Button>
-        </motion.div>
+
       </motion.div>
     </section>
   );

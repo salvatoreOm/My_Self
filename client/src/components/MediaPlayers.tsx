@@ -30,8 +30,9 @@ export function MediaPlayer({ item }: MediaPlayerProps) {
           </svg>
         </div>
 
-        <div className="bg-black/20 rounded-xl p-2 mb-4">
+        <div className="bg-black/20 rounded-xl p-1 mb-4">
           <iframe 
+            data-testid="embed-iframe"
             style={{borderRadius: "12px"}} 
             src={item.embedUrl}
             width="100%" 
@@ -40,7 +41,6 @@ export function MediaPlayer({ item }: MediaPlayerProps) {
             allowFullScreen 
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
-            data-testid="spotify-iframe"
           />
         </div>
 

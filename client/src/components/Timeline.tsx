@@ -32,10 +32,21 @@ export function Timeline() {
 
   return (
     <div className="relative">
-      <div className="absolute left-8 top-0 bottom-0 w-1 timeline-line" />
+      {/* Bachelors heading */}
+      <motion.h3 
+        className="text-2xl font-bold mb-8 text-center text-primary"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        My Bachelors so far at IIIT Nagpur
+      </motion.h3>
+      
+      <div className="absolute left-8 top-16 bottom-0 w-1 timeline-line" />
 
       <motion.div 
-        className="space-y-8"
+        className="space-y-8 mt-16"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

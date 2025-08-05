@@ -34,7 +34,7 @@ export function AnimatedText({ text, className = "", delay = 0, type = "bounce" 
           } as React.CSSProperties}
           whileHover={{
             scale: 1.2,
-            color: "#0080ff",
+            color: "hsl(var(--primary))",
             transition: { duration: 0.2 },
           }}
         >

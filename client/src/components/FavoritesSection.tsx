@@ -39,7 +39,7 @@ export function FavoritesSection() {
           className="text-4xl md:text-5xl font-bold text-center mb-16"
           variants={itemVariants}
         >
-          <AnimatedText text="My Favorites" />
+          <AnimatedText text="My Favorites :)" />
         </motion.h2>
 
         <motion.div 
